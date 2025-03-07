@@ -1,8 +1,19 @@
+import FeedPosts from "../components/FeedPosts/FeedPosts"
 
 
 function HomePage(){
     return(
-        <h1>Home Page</h1>
+        <div className="homepage-container">
+            <div className="homepage-feed">
+                
+                <FeedPosts />
+            </div>
+            <div className="homepage-suggested">
+                Suggested User
+            </div>
+           
+        </div>
+        
     )
 }
 

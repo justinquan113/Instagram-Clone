@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 .login-page{
   display: flex;
   flex-direction: column;
@@ -117,7 +117,7 @@
   flex-direction: column;
   gap: 30px;
   font-family: Poppins;
-  font-size: medium;
+  font-size: 1rem;
 }
 
 
@@ -133,9 +133,6 @@
   }
 }
 
-
-
-
 .home-main{
   flex: 1;
   width: calc(100% - 70px);
@@ -150,8 +147,8 @@
 }
 
 .sidebar-instagram {
-  width:  120px;
-  height: 60px;
+  width:  7.5rem;
+  height: 3.75rem;
 }
 
 .sidebar-icon-text{
@@ -159,7 +156,7 @@
   align-items: center;
   gap: 10px;
   text-decoration: none;
-  
+  flex-shrink: 0;
   
 }
 
@@ -172,4 +169,72 @@
   gap: 10px;
   align-items: center;
   margin-top: auto;
+}
+
+.homepage-container{
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+  
+}
+
+.homepage-feed{
+  width: 600px;
+  
+  padding: 50px 0px;
+  
+}
+
+.homepage-suggested{
+  width: 300px;
+  border: 1px solid blue;
+  
+}
+
+.feed-image{
+  width: 597px;
+  
+}
+
+.post-header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+ /*profile pciture */
+.avatar{ 
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 2px;
+}
+
+.header-user{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-name{
+  font-size: 15px;
+  
+}
+
+.user-date{
+  font-size: 15px;
+  color: gray;
+}
+
+.unfollow{
+  color: blue;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.unfollow:hover{
+  color: white;
+  transition: 0.2 ease-in-out;
 }
