@@ -1,15 +1,15 @@
 import PostFooter from "./PostFooter"
 import PostHeader from "./PostHeader"
 
-function FeedPost(){
+function FeedPost(props){
     return(
         <div className="feed-post">
             <div>
-                <PostHeader />
+                <PostHeader username={props.username} avatar={props.avatar}/>
             </div>
-            <img src= "./images/img1.png" className="feed-image"></img>
+            <img src= {props.image} className="feed-image"></img>
             
-            <PostFooter />
+            <PostFooter username={props.username}/>
         </div>
     )
 }

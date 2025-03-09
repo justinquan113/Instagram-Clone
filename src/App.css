@@ -7,9 +7,7 @@
   align-items: center;
   height: 100vh;
   background-color: black;
-  font-family: Poppins;
-  
-  
+  font-family: Roboto;
 }
 
 
@@ -61,7 +59,6 @@
  a{
   color: blue;
   cursor: pointer;
-  
 }
 
 .signup-page{
@@ -71,8 +68,7 @@
   align-items: center;
   height: 100vh;
   background-color: black;
-  font-family: Poppins;
-  
+  font-family: Roboto;
 }
 
 .signup-user-info{
@@ -82,7 +78,6 @@
   height: 40vh;
   padding: 30px;
   width: 30vh;
-  
 }
 
 .signup-user-info input{
@@ -90,8 +85,7 @@
   padding: 8px;
   background: none;
   border: 1px solid gray;
-  color: white;
-  
+  color: white; 
 }
 
 .login{
@@ -105,19 +99,20 @@
 
 .home-page{
   display: flex;
-  
 }
 
 .sidebar{
   width: 270px;
-  border-right: 1px solid white;
+  border-right: 1px solid rgba(255, 255, 255, 0.3);
   height: 100vh;
   padding: 30px;
   display: flex;
   flex-direction: column;
   gap: 30px;
-  font-family: Poppins;
   font-size: 1rem;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 
@@ -128,13 +123,17 @@
   .sidebar-icon-text h3{
     display: none;
   }
+
+  .sidebar-logout h3 {
+    display: none;
+  }
   .sidebar-icon{
     font-size: 1.7rem;
   }
 }
 
 .home-main{
-  flex: 1;
+  
   width: calc(100% - 70px);
   margin-left: auto;
   margin-right: auto;
@@ -149,6 +148,14 @@
 .sidebar-instagram {
   width:  7.5rem;
   height: 3.75rem;
+}
+
+.sidebar-mobile-instagram{
+  padding: 8px;
+  display: block;
+  border-radius: 6px;
+  width: 40px;
+  cursor: pointer;
 }
 
 .sidebar-icon-text{
@@ -169,6 +176,7 @@
   gap: 10px;
   align-items: center;
   margin-top: auto;
+  text-decoration: none;
 }
 
 .homepage-container{
@@ -180,19 +188,33 @@
 
 .homepage-feed{
   width: 600px;
-  
-  padding: 50px 0px;
+  padding: 100px 0px;
   
 }
 
 .homepage-suggested{
-  width: 300px;
-  border: 1px solid blue;
+  width: 250px;
   
+  height: 50vh;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+
+.feedposts{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+}
+.feed-post{
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
 }
 
 .feed-image{
   width: 597px;
+  border-radius: 7px;
+  overflow: hidden;
   
 }
 
@@ -238,3 +260,123 @@
   color: white;
   transition: 0.2 ease-in-out;
 }
+
+.post-footer-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 15px;
+}
+
+
+
+.heart{
+  font-size: 25px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.comment{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.footer-likes-caption{
+  
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.caption{
+  display: flex;
+  gap: 5px;
+}
+
+.posting-comment{
+  display: flex;
+}
+
+.posting-comment input{
+  border: none;
+  padding: 10px;
+  margin-top: 5px;
+  width: 100%;
+  overflow: hidden;
+  outline: none;
+}
+
+.posting-comment button{
+  color: blue;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  
+}
+
+.posting-comment button:hover{
+  color: white;
+  
+}
+
+.suggested-header{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  
+}
+
+.suggested-header-avatar{ 
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  
+}
+
+.suggested-header-logout  {
+  color: blue;
+  cursor: pointer;
+  text-decoration: none;
+  margin-left: auto;
+}
+
+.suggested-for-u{
+  display: flex;
+  font-size: 13px;
+  justify-content: space-between;
+  margin-top: 30px;
+
+}
+
+.suggested-user{
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  
+}
+
+.suggested-user-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+
+
+.suggested-user-follow{
+  color: blue;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  font-size: 13px;
+  cursor: pointer;
+  border: none;
+}
+
+.suggested-user-follow:hover{
+  color: white;
+}
+

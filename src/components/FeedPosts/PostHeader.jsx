@@ -1,15 +1,12 @@
-function PostHeader(){
+function PostHeader(props){
     return(
         <div className="post-header-container">
             <div className="header-user">
-                <img className="avatar" src="./images/img1.png"></img>
-                <div className="user-name">Username</div>
-                <div className="user-date">•55m</div>
+                <img className="avatar" src={props.avatar}></img>
+                <p className="user-name">{props.username}</p>
+                <p className="user-date">•55m</p>
             </div>
-            <div className="unfollow">Unfollow</div>
-            
-           
-            
+            <p className="unfollow">Unfollow</p>                             
         </div>
     )
 }

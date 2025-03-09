@@ -10,7 +10,8 @@ function Sidebar(){
         <div className="sidebar">
             <Link to={"/"} className="sidebar-icon-text">
                 
-                <InstagramLogo className="sidebar-instagram"/> 
+                <InstagramLogo className="sidebar-instagram"/>
+                <InstagramMobileLogo className="sidebar-mobile-instagram"/> 
             </Link>
             
             <Link to={"/"} className="sidebar-icon-text">
@@ -36,7 +37,7 @@ function Sidebar(){
 
             <Link  to={"/auth"} className="sidebar-logout">
                 <CiLogout className="sidebar-icon"/>
-                <h3>Logout</h3>
+                <h3>Log out</h3>
             </Link>  
         </div>
            
