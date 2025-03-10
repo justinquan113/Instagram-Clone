@@ -8,10 +8,13 @@ import { CiLogout } from "react-icons/ci";
 function Sidebar(){
     return (
         <div className="sidebar">
+            
             <Link to={"/"} className="sidebar-icon-text">
                 
                 <InstagramLogo className="sidebar-instagram"/>
-                <InstagramMobileLogo className="sidebar-mobile-instagram"/> 
+                
+                <InstagramMobileLogo className="mobile-logo"/>
+                
             </Link>
             
             <Link to={"/"} className="sidebar-icon-text">
@@ -30,8 +33,8 @@ function Sidebar(){
             <FaRegSquarePlus className="sidebar-icon"/>
                 <h3>Create</h3>
             </Link>
-            <Link className="sidebar-icon-text">
-                <img className="avatar"  src="./images/img1.png"></img>
+            <Link className="sidebar-icon-text" to={"/profile"}>
+                <img className="avatar"  src="./images/jinwoo.png"></img>
                 <h3>Profile</h3>
             </Link>
 
