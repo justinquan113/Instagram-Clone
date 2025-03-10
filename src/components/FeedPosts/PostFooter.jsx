@@ -15,8 +15,8 @@ function PostFooter(props){
             <div className="footer-like-comment">
                 {liked 
                 ? <FaHeart onClick={handleLike} style={{fill: "red"}} className="heart"/> 
-                : <FaRegHeart onClick={handleLike} className="heart"/>}
-                <FaRegComment className="comment"/>
+                : <FaRegHeart onClick={handleLike} className="heart-icon"/>}
+                <FaRegComment className="comment-icon"/>
                 
             </div>
             <div className="footer-likes-caption">

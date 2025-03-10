@@ -9,7 +9,7 @@ function ProfilePage(){
     return(
        <div className="profile">   
             <div>
-                <ProfileHeader />
+                <ProfileHeader avatar = "./images/jinwoo.png"/>
             </div>
             <div className="profile-posts-section">
                 <ProfileTabs />

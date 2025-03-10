@@ -1,8 +1,8 @@
-function ProfileHeader(){
+function ProfileHeader(props){
     return(
         
         <div className="profile-header-image">
-            <img className="profile-avatar" src="/images/jinwoo.png"></img>
+            <img className="profile-avatar" src= {props.avatar}></img>
             <div className="profile-header">
                 
                 <div className="profile-username">

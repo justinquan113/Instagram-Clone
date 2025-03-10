@@ -8,13 +8,13 @@ import PostModal from "./PostModal";
 function ProfilePost(props){
     
     const [isModalOpen, setIsModalOpen] = React.useState(false)
-    function toggleModal(){
+    function toggleModal(toggle){
         setIsModalOpen(prevState => !prevState)
     }
    
     return(
         <>
-        {isModalOpen && <PostModal />}
+        {isModalOpen && <PostModal image = {props.image} toggleModal={toggleModal} />}
         <div className="post-container" onClick={toggleModal}>
               <div className="overlay">
                  <div className="likes-comments">

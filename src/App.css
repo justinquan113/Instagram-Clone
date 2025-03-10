@@ -288,13 +288,13 @@
   font-size: 15px;
 }
 
-.heart{
+.heart-icon{
   font-size: 25px;
   cursor: pointer;
   margin-right: 10px;
 }
 
-.comment{
+.comment-icon{
   font-size: 25px;
   cursor: pointer;
 }
@@ -594,14 +594,72 @@
   top: 50%;
   left: 60%;
   transform: translate(-50%, -50%);
-  border: 1px solid blue;
   position: fixed;
   z-index: 1000;
-  width: 60%;
-  height: 60%;
-  align-items: center;
+  width: 70%;
+  height: 70%;
+  display: flex;
 }
 
 
+.modal-image{
+  width: 100%;
+}
 
+.modal-right-side{
+  width: 100%;
+  padding: 20px;
+  
+  
+}
+
+.modal-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.header-avatar-username{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);;
+  width: 100%;
+  padding: 10px 0px;
+}
+
+.modal-avatar{
+  width: 30px;
+  border-radius: 50%;
+  height: 30px;
+}
+
+.trash{
+  
+  margin-left: auto;
+}
+
+.modal-close-btn{
+  margin-left: auto;
+  border: none;
+  padding-left: 20px; 
+}
+
+.x-btn{
+  font-size: 20px;
+  cursor: pointer;
+  
+  
+}
+
+.comment{
+  display: flex;
+}
+
+.user-day{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 /*End of Profile Page */
