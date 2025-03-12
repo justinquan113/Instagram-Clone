@@ -14,20 +14,13 @@ function SignUp(props){
     const [showPassword, setShowPassword] = React.useState(false)
     const {loading, error, signup} = useSignUpWithEmailAndPassword();
     
-    function handleAuth(e){
-        e.preventDefault();
-        if (!userInfo.email || !userInfo.password || !userInfo.fullName || !userInfo.username){
-            alert("Please fill out all inputs");
-            return;
-        }
-        navigate("/");
-    }
+    
 
     function toggleShow(){
         setShowPassword(prevState => !prevState)
     }
     return(
-        <form className="signup-page">
+        <form className="signup-page" >
             <div>
                 <div className="signup-user-info">
                     <h1 className="instagram">Instagram</h1>
@@ -60,7 +53,7 @@ function SignUp(props){
                         <input 
                             value={userInfo.password} 
                             type= {showPassword ? "text" : "password"} 
-                            placeholder="Password"
+                            placeholder= "Password"
                             onChange={(e) => setUserInfo({...userInfo, password: e.target.value})}
                         >
                         
@@ -75,7 +68,15 @@ function SignUp(props){
                     </div>
                    
                     
-                    <button className="submit-btn" onClick={() => signup(userInfo)}>Sign Up</button>     
+                    <button className="submit-btn" 
+                        onClick={(e) => {
+                            e.preventDefault()
+                            
+                            signup(userInfo)}}
+                            
+                    >
+                        Sign Up
+                    </button>     
                 </div>
                 <div className="login">
                     <h3>Have an account?</h3>
