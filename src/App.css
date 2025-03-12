@@ -96,6 +96,36 @@
   text-align: center;
 }
 
+
+.password-input{
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.password-input input{
+  width: 100%;
+  padding-right: 60px;
+  box-sizing: border-box;
+  
+}
+.show-password-btn{
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  font-weight: bold;
+  
+}
+
+.show-password-btn:hover{
+  color: blue;
+}
+  
+
+
+
+
 /*End of login and signup page */
 
 .home-page{
@@ -281,11 +311,16 @@
   transition: 0.2 ease-in-out;
 }
 
+/*Post Footer*/
+
 .post-footer-container{
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-size: 15px;
+  
+  width: 100%;
+
 }
 
 .heart-icon{
@@ -607,10 +642,12 @@
 }
 
 .modal-right-side{
+  display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 20px;
-  
-  
+  height: 100%;
+  border: 1px solid white;
 }
 
 .modal-header{
@@ -629,10 +666,15 @@
   padding: 10px 0px;
 }
 
+.header-avatar-username p{
+  font-size: 13px;
+}
+
 .modal-avatar{
-  width: 30px;
+  width: 35px;
   border-radius: 50%;
-  height: 30px;
+  height: 35px;
+  object-fit: cover;
 }
 
 .trash{
@@ -653,13 +695,36 @@
   
 }
 
+.comments-container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  gap: 30px;
+  margin-top: 20px;
+  overflow-y: auto;
+}
+
 .comment{
   display: flex;
+  font-size: 12px;
+  gap: 4px;
 }
 
 .user-day{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 7px;
 }
+
+
+
+.created-at{
+  color: gray;
+  font-size: 12px;
+
+}
+
+
 /*End of Profile Page */

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import React from "react";
+import useSignUpWithEmailAndPassword from "../../hooks/useSignUpWithEmailAndPassword"
 function SignUp(props){
 
     const navigate = useNavigate();
@@ -9,19 +10,22 @@ function SignUp(props){
         fullName: "",
         username: ""
     });
-
+    
+    const [showPassword, setShowPassword] = React.useState(false)
+    const {loading, error, signup} = useSignUpWithEmailAndPassword();
+    
     function handleAuth(e){
         e.preventDefault();
         if (!userInfo.email || !userInfo.password || !userInfo.fullName || !userInfo.username){
             alert("Please fill out all inputs");
             return;
         }
-        
         navigate("/");
-
-        
     }
 
+    function toggleShow(){
+        setShowPassword(prevState => !prevState)
+    }
     return(
         <form className="signup-page">
             <div>
@@ -35,14 +39,7 @@ function SignUp(props){
                     >
                         
                     </input>
-                    <input 
-                        value={userInfo.password} 
-                        type="password" 
-                        placeholder="Password"
-                        onChange={(e) => setUserInfo({...userInfo, password: e.target.value})}
-                    >
-                        
-                    </input>
+                    
                     <input 
                         value={userInfo.fullName} 
                         type="text" 
@@ -59,11 +56,30 @@ function SignUp(props){
                     >
 
                     </input>
-                    <button className="submit-btn" onClick={handleAuth}>Sign Up</button>     
+                    <div className="password-input">
+                        <input 
+                            value={userInfo.password} 
+                            type= {showPassword ? "text" : "password"} 
+                            placeholder="Password"
+                            onChange={(e) => setUserInfo({...userInfo, password: e.target.value})}
+                        >
+                        
+                        </input>
+                        <button 
+                            type="button" 
+                            className="show-password-btn" 
+                            onClick={toggleShow}
+                        >
+                            {showPassword ? "Hide" : "Show"}
+                        </button>
+                    </div>
+                   
+                    
+                    <button className="submit-btn" onClick={() => signup(userInfo)}>Sign Up</button>     
                 </div>
                 <div className="login">
-                        <h3>Have an account?</h3>
-                        <a onClick={props.togglePage}>Log in</a>
+                    <h3>Have an account?</h3>
+                    <a onClick={props.togglePage}>Log in</a>
                 </div>
             </div>
         </form>

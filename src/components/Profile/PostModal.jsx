@@ -1,8 +1,9 @@
 import { AiOutlineClose } from "react-icons/ai";
 import { FaTrash } from "react-icons/fa6";
-
+import PostFooter from "../FeedPosts/PostFooter"
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Comment from "../Comment/Comment";
 function PostModal(props){
 
     
@@ -13,8 +14,8 @@ function PostModal(props){
             <div className='modal-right-side'>
                 <div className='modal-header'>
                     <div className="header-avatar-username">
-                        <img className="avatar" src= {props.image}></img>
-                        <p>Username</p>
+                        <img className="modal-avatar" src= {props.image}></img>
+                        <p >Username</p>
                         <div className="trash">
                             <FaTrash style={{cursor: "pointer"}}/>
                         </div>
@@ -27,20 +28,78 @@ function PostModal(props){
                         <AiOutlineClose className="x-btn"/>
                     </button>
                 </div>
-                <div>
-                    <div className="comment">
-                        <img className="avatar" src="./images/sukuna.png"></img>
-                        <div className="user-day">
-                            <p>username</p>
-                            <p>day</p>
-                        </div>
-                        <p>comment</p>
-                    </div>
-                   
-                   
+                
+                <div className="comments-container">
+                    
+                        <Comment 
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        
+                        />
+                        <Comment 
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        
+                        />
+                        <Comment  
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        />
+                         <Comment  
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        />
+                         <Comment  
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        />
+                         <Comment  
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        />
+                         <Comment  
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        />
+                         <Comment  
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        />
+                         <Comment  
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        />
+                         <Comment  
+                            avatar = {props.image}
+                            comment = {"nice pic"}
+                            username = {"Justin"}
+                            createdAt = {"12h ago"}
+                        />
+                        
+                    
                 </div>
-                <div>
-                    Footer
+                   
+               
+                <div className="modal-footer">
+                    <PostFooter isProfilePage ={true}/>
                 </div>
             </div>
            
