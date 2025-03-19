@@ -5,7 +5,11 @@ import { FaSearch } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { FaRegSquarePlus } from "react-icons/fa6";
 import { CiLogout } from "react-icons/ci";
+import useAuthStore from "../../store/authStore";
+import useLogout from "../../hooks/useLogout";
 function Sidebar(){
+   
+    const {handleLogout} = useLogout()
     return (
         <div className="sidebar">
             
@@ -37,10 +41,10 @@ function Sidebar(){
                 <h3>Profile</h3>
             </Link>
 
-            <Link  to={"/auth"} className="sidebar-logout">
+            <div onClick={handleLogout} className="sidebar-logout">
                 <CiLogout className="sidebar-icon"/>
                 <h3>Log out</h3>
-            </Link>  
+            </div>  
         </div>
            
 

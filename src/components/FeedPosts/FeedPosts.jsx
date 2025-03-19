@@ -5,7 +5,7 @@ function FeedPosts(){
         <div className="feedposts">
             <FeedPost  
                 username="justin" 
-                image="./images/img1.png" 
+                image="./images/jinwoo.png" 
                 avatar="./images/img1.png"
             />
             <FeedPost 
