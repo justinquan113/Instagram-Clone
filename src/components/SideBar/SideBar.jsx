@@ -12,7 +12,6 @@ function Sidebar(){
             <Link to={"/"} className="sidebar-icon-text">
                 
                 <InstagramLogo className="sidebar-instagram"/>
-                
                 <InstagramMobileLogo className="mobile-logo"/>
                 
             </Link>
