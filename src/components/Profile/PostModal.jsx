@@ -23,7 +23,7 @@ function PostModal(props){
                     
                     <button 
                         className="modal-close-btn"
-                        onClick={() => props.toggleModal(false)}
+                        onClick={() => props.toggleModal()}
                     >
                         <AiOutlineClose className="x-btn"/>
                     </button>

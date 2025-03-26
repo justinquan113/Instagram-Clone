@@ -5,12 +5,12 @@ function FeedPosts(){
         <div className="feedposts">
             <FeedPost  
                 username="justin" 
-                image="./images/jinwoo.png" 
+                image="./images/img1.png" 
                 avatar="./images/img1.png"
             />
             <FeedPost 
                 username="aaron" 
-                image="./images/luffy.png" 
+                image="./images/gear5.png" 
                 avatar="./images/luffy.png"
             />
             <FeedPost 

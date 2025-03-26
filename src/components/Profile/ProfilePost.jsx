@@ -8,7 +8,7 @@ import PostModal from "./PostModal";
 function ProfilePost(props){
     
     const [isModalOpen, setIsModalOpen] = React.useState(false)
-    function toggleModal(toggle){
+    function toggleModal(){
         setIsModalOpen(prevState => !prevState)
     }
    

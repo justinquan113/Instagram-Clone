@@ -6,7 +6,7 @@ import { data } from "react-router-dom";
 import useAuthStore from "../store/authStore";
 
 function useSignUpWithEmailAndPassword(){
-    const [createUserWithEmailAndPassword,user,loading,error] = useCreateUserWithEmailAndPassword(auth);
+    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth);
     const addUser = useAuthStore(state => state.login)
     async function signup(inputs){
         if (!inputs.email || !inputs.password || !inputs.fullName || !inputs.username){

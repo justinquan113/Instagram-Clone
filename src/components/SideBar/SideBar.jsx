@@ -8,8 +8,10 @@ import { CiLogout } from "react-icons/ci";
 import useAuthStore from "../../store/authStore";
 import useLogout from "../../hooks/useLogout";
 function Sidebar(){
-   
+    const authUser = useAuthStore((state) => state.user)
     const {handleLogout} = useLogout()
+
+    if(!authUser) return null;
     return (
         <div className="sidebar">
             
@@ -36,7 +38,7 @@ function Sidebar(){
             <FaRegSquarePlus className="sidebar-icon"/>
                 <h3>Create</h3>
             </Link>
-            <Link className="sidebar-icon-text" to={"/profile"}>
+            <Link className="sidebar-icon-text" to={`${authUser.username}`}>
                 <img className="avatar"  src="./images/jinwoo.png"></img>
                 <h3>Profile</h3>
             </Link>

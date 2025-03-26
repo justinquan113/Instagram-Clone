@@ -1,5 +1,6 @@
 import React from "react"
 import { useNavigate } from "react-router-dom"
+import useLogin from "../../hooks/useLogin";
 
 function Login(props){
     const navigate = useNavigate();
@@ -8,17 +9,8 @@ function Login(props){
         password: ""
     });
 
-    function handleAuth(){
-        
-        if (!userInfo.email || !userInfo.password){
-            alert("Please fill out all inputs");
-            return;
-        }
-        
-        navigate("/");
-
-        
-    }
+    const {handleLogin, loading} = useLogin()
+   
 
     return(
         <div className="login-page">
@@ -37,7 +29,7 @@ function Login(props){
                         type="password" 
                         placeholder="Password">
                     </input>                   
-                    <button onClick={handleAuth} className="submit-btn" >Log in</button>                
+                    <button onClick={() => handleLogin(userInfo)} className="submit-btn" >{loading ? "Logging in..." : "Log in"}</button>                
                 </div>
                 <div className="signup">Dont have an account? <a onClick={props.togglePage} >Sign Up</a></div>
             </div>
