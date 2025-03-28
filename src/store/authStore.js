@@ -4,7 +4,7 @@ const useAuthStore = create((set) => ({
     user: JSON.parse(localStorage.getItem('user-info')),
     login: (user) => set({user}),
     logout: () => set({user: null}),
-    newUser: (user) => set({user})
+    setUser: (user) => set({user})
     
 
   }))
